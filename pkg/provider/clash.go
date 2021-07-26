@@ -6,6 +6,8 @@ import (
 	"github.com/zu1k/proxypool/pkg/tool"
 
 	"github.com/zu1k/proxypool/pkg/proxy"
+
+	"fmt"
 )
 
 type Clash struct {
@@ -26,11 +28,13 @@ func (c Clash) Provide() string {
 	c.preFilter()
 
 	var resultBuilder strings.Builder
-	var proxieswrite = true
+	var proxieswrite = "towrite"
 	for _, p := range *c.Proxies {
-		if proxieswrite {
+		if proxieswrite == "towrite" {
 			resultBuilder.WriteString("proxies:\n")
-			var proxieswrite = false
+			fmt.Println(proxieswrite)
+			var proxieswrite = "stopwrite"
+			fmt.Println(proxieswrite)
 		}
 		if checkClashSupport(p) {
 			resultBuilder.WriteString(p.ToClash() + "\n")
