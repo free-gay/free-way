@@ -43,7 +43,7 @@ func (c Clash) Provide() string {
 		}
 	}
 	if c.IsEmpty() {
-		resultBuilder.WriteString('- {"name":"🏁 ZZ_NO_PROXY","server":"0.0.0.0","port":47027,"type":"ss","country":"🏁 ZZ","password":"Vt5pBJFwdtNB26cJbTXxm88Z","cipher":"aes-256-gcm"}' + "\n")
+		resultBuilder.WriteString(`- {"name":"🏁 ZZ_NO_PROXY","server":"0.0.0.0","port":47027,"type":"ss","country":"🏁 ZZ","password":"Vt5pBJFwdtNB26cJbTXxm88Z","cipher":"aes-256-gcm"}` + "\n")
 	}
 	return resultBuilder.String()
 }
