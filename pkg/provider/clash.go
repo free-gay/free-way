@@ -17,7 +17,7 @@ type Clash struct {
 }
 
 func (c Clash) IsEmpty() bool {
-	return reflect.DeepEqual(p, Clash{})
+	return reflect.DeepEqual(c, Clash{})
 }
 
 func (c Clash) CleanProxies() (proxies proxy.ProxyList) {
