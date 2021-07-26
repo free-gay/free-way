@@ -7,8 +7,6 @@ import (
 
 	"github.com/zu1k/proxypool/pkg/proxy"
 
-	"fmt"
-
 	"reflect"
 )
 
