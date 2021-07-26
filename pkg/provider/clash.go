@@ -6,8 +6,6 @@ import (
 	"github.com/zu1k/proxypool/pkg/tool"
 
 	"github.com/zu1k/proxypool/pkg/proxy"
-
-	"reflect"
 )
 
 type Clash struct {
