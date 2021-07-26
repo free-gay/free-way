@@ -10,14 +10,8 @@ import (
 	"reflect"
 )
 
-var proxieswrite string
-
 type Clash struct {
 	Base
-}
-
-func (c Clash) IsEmpty() bool {
-	return reflect.DeepEqual(c, Clash{})
 }
 
 func (c Clash) CleanProxies() (proxies proxy.ProxyList) {
@@ -39,9 +33,6 @@ func (c Clash) Provide() string {
 		if checkClashSupport(p) {
 			resultBuilder.WriteString(p.ToClash() + "\n")
 		}
-	}
-	if c.IsEmpty() {
-		resultBuilder.WriteString(`- {"name":"🏁 ZZ_NO_PROXY","server":"0.0.0.0","port":47027,"type":"ss","country":"🏁 ZZ","password":"Vt5pBJFwdtNB26cJbTXxm88Z","cipher":"aes-256-gcm"}` + "\n")
 	}
 	return resultBuilder.String()
 }
