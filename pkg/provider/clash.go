@@ -10,6 +10,8 @@ import (
 	"fmt"
 )
 
+var proxieswrite string
+
 type Clash struct {
 	Base
 }
