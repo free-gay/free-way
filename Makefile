@@ -18,7 +18,8 @@ PLATFORM_LIST = \
 	linux-mips64 \
 	linux-mips64le \
 	freebsd-386 \
-	freebsd-amd64
+	freebsd-amd64 \
+	windows-amd64
 
 
 all: linux-amd64 darwin-amd64
@@ -70,6 +71,9 @@ freebsd-386:
 
 freebsd-amd64:
 	GOARCH=amd64 GOOS=freebsd $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
+
+windows-amd64:
+	GOARCH=amd64 GOOS=windows $(GOBUILD) -o $(BINDIR)/$(NAME)-$@
 
 gz_releases=$(addsuffix .gz, $(PLATFORM_LIST))
 
