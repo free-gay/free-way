@@ -1,5 +1,5 @@
 # your domain
-domain: example.com
+domain: free-way.herokuapp.com
 
 # database url
 database_url: ""
