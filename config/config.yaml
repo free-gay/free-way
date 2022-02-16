@@ -10,7 +10,4 @@ cf_key: ""
 
 # source definition file
 source-files:
-  # use local file
-  - source.yaml
-  # use web file
   - https://raw.githubusercontent.com/free-gay/free-way/master/config/source.yaml
