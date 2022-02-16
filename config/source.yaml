@@ -3,15 +3,21 @@
   options:
     url: https://raw.githubusercontent.com/du5/free/master/sub.list
 
-# 订阅链接
+# 订阅链接 - V2Ray
 - type: subscribe
   options:
-    url: https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray
+    url: https://raw.githubusercontent.com/ssrsub/ssr/master/V2Ray
 
 # 网页模糊抓取
 - type: webfuzz
   options:
     url: https://merlinblog.xyz/wiki/freess.html
+
+# tg频道抓取
+- type: tgchannel
+  options:
+    channel: SSRSUB
+    num: 200
 
 # tg频道抓取
 - type: tgchannel
@@ -24,6 +30,16 @@
   options:
     url: https://fanqiangdang.com/forum-48-1.html
 
-# 某个网站抓取
-- type: web-freessrxyz
+# clash格式订阅链接
+- type: clash
   options:
+    url: https://raw.githubusercontent.com/du5/free/master/file/0207/clash.yaml
+
+# clash格式订阅链接
+- type: clash
+  options:
+    url: https://raw.githubusercontent.com/ssrsub/ssr/master/Clash.yml
+
+# 某个网站抓取
+# - type: web-freessrxyz
+#  options:
